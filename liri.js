@@ -25,6 +25,8 @@ var request = require("request");
 var everything = process.argv;
 // Var for the argument being displayed [2] (ex: "my-tweets")
 var Argument = process.argv[2];
+
+var Argument2 = process.argv[3];
 // Var for the userInput (ex: Movie Name, etc..)
 var userInput = "";
 //Need this to access twitter info
@@ -128,7 +130,7 @@ function songs() {
 
 function movies() {
 
-    request('http://www.omdbapi.com/?t=' + userInput + '&apikey=trilogy', function (error, response, body) {
+    request('http://www.omdbapi.com/?t=' + Argument2 + '&apikey=trilogy', function (error, response, body) {
 
         if (error) {
             console.log("Errors Found: " + error);
